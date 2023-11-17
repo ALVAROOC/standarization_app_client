@@ -48,7 +48,7 @@ const PublicFeatures = () => {
             </div>
           ))}
         </div>
-        <div className="max-h-2 mt-20 bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% rounded-lg max-w-sm justify-center mx-auto"> <span>" "</span></div>
+        <div className="max-h-2 mt-20 bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% rounded-lg max-w-sm justify-center mx-auto"> </div>
       </div>
     </section>
     </>

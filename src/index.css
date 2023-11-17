@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');*/
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -12,16 +14,38 @@
 }
 
 html{
-    font-family: 'Share Tech Mono', monospace;
+    /* font-family: 'Share Tech Mono', monospace; */
+    font-family: 'Roboto', sans-serif;
     /* font-size: 1.5rem; */
 }
 
 body{
     /* min-height: 100vh; */
-    background-color: #222222;
+    background-color: #202124;
     /* color: whitesmoke; */
     color: #49d196;
     /* display: grid;
     place-content: center;
     padding: 1rem; */
 }
+
+.react-flow__node-selectorNode {
+    font-size: 12px;
+    background: #eee;
+    border: 1px solid #555;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+
+  .standalone-light {
+    position: absolute;
+    width: 500px; /* Adjust the width and height as needed */
+    height: 500px;
+    background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); /* Add a soft glow effect */
+  }
+  
+  

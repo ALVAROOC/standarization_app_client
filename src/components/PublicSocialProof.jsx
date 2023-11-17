@@ -30,7 +30,7 @@ const PublicSocialProof = () => {
           {testimonials.map((testimonial, index) => (
             <div key={index} className="bg-zinc-900 p-6 rounded-lg shadow">
               <div className="text-gray-400 mb-4">
-                "{testimonial.comment}"
+                {testimonial.comment}
               </div>
               <div className="text-gray-600 font-semibold">
                 - {testimonial.name}, {testimonial.title}

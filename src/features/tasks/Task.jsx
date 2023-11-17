@@ -14,13 +14,13 @@ const Task = ({ taskId }) => {
         const created = new Date(task.createdAt).toLocaleString('en-US', {day: 'numeric', month: 'long', year: 'numeric'})
         const updated = new Date(task.updatedAt).toLocaleString('en-US', {day: 'numeric', month: 'long', year: 'numeric'})
 
-        const handleEdit = () => navigate(`/dash/users/${taskId}`)
+        const handleEdit = () => navigate(`/dash/tasks/${taskId}`)
 
         // const userRolesString = user.roles.toString().replaceAll(',', ', ')
 
-        const cellStatus = task.status !== "Completed" ? '' : 'bg-green-900';
+        const cellStatus = task.status !== "Completed" ? '' : 'bg-[#407359]';
 
-        console.log(cellStatus)
+
 
         return (
 
@@ -48,7 +48,7 @@ const Task = ({ taskId }) => {
             </td>
             <td className={`px-6 py-4 text-right ${cellStatus}`}>
             <button
-                        className="icon-button table__button text-yellow-200 flex justify-center"
+                        className="icon-button table__button text-yellow-300 flex justify-center hover:scale-110 hover:text-white"
                         onClick={handleEdit}
                     >
                         <FontAwesomeIcon icon={faPenToSquare} />

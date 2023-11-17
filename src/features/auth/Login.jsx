@@ -8,7 +8,7 @@ const Login = () => {
           <h5 className="text-3xl font-medium text-center">Log In</h5>
           <div>
             <label
-              for="email"
+              htmlFor="email"
               className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
             >
               Your email
@@ -24,7 +24,7 @@ const Login = () => {
           </div>
           <div>
             <label
-              for="password"
+              htmlFor="password"
               className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
             >
               Your password
@@ -50,7 +50,7 @@ const Login = () => {
                 />
               </div>
               <label
-                for="remember"
+                htmlFor="remember"
                 className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
               >
                 Remember me

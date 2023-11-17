@@ -18,11 +18,15 @@ const DashFooter = () => {
   }
 
   const content = (
-    <footer className="footer footer-center p-4 bg-base-300 text-base-content text-sm text-gray-500">
-      <aside>
-        <p>Copyright © 2023 - All right reserved by ALVAROOC Industries Ltd</p>
-      </aside>
-    </footer>
+    <div className="p-4 sm:ml-64 mt-20">
+        <div className="">
+          <footer className="footer footer-center p-4 bg-base-300 text-base-content text-sm text-gray-500">
+            <aside>
+              <p>Copyright © 2023 - All right reserved by ALVAROOC Industries Ltd</p>
+            </aside>
+          </footer>
+        </div>
+    </div>
   );
   return content;
 };

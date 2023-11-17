@@ -42,7 +42,7 @@ const NewUserForm = () => {
 
   const onUsernameChanged = (e) => setUsername(e.target.value);
   const onPasswordChanged = (e) => setPassword(e.target.value);
-  const onEmailChanged = (e) => setPassword(e.target.value);
+  const onEmailChanged = (e) => setEmail(e.target.value);
 
   const onRolesChanged = (e) => {
     const values = Array.from(
@@ -57,6 +57,7 @@ const NewUserForm = () => {
 
   const onSaveUserClicked = async (e) => {
     e.preventDefault();
+
     if (canSave) {
       await addNewUser({ username, password, email, roles });
     }
@@ -71,7 +72,7 @@ const NewUserForm = () => {
     );
   });
 
-  const errClass = isError ? "errmsg" : "offscreen";
+  const errClass = isError ? "text-red-500" : "text-transparent";
   const validUserClass = !validUsername ? "border-red" : "";
   const validPwdClass = !validPassword ? "b" : "";
   const validRolesClass = !Boolean(roles.length)
@@ -80,7 +81,9 @@ const NewUserForm = () => {
 
   const content = (
     <>
+      <div className="flex mx-auto items-center justify-center ">
       <p className={errClass}>{error?.data?.message}</p>
+      </div>
       <section className="">
         <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
           {/* <a href="#" className="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white">
@@ -98,7 +101,7 @@ const NewUserForm = () => {
                     htmlFor="username"
                     className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                   >
-                    Username
+                    Username <span className="text-sm text-gray-500">[3-20 letters]</span>
                   </label>
                   <input
                     type="text"
@@ -123,7 +126,8 @@ const NewUserForm = () => {
                     type="email"
                     name="email"
                     id="email"
-                    className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 
+                    block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     placeholder="name@company.com"
                     onChange={onEmailChanged}
                     required
@@ -150,7 +154,7 @@ const NewUserForm = () => {
                     htmlFor="password"
                     className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                   >
-                    Password
+                    Password <span className="text-sm text-gray-500">[4-12 chars incl. !@#$%]</span>
                   </label>
                   <input
                     type="password"
@@ -173,7 +177,7 @@ const NewUserForm = () => {
                     Confirm password
                   </label>
                   <input
-                    type="confirm-password"
+                    type="password"
                     name="confirm-password"
                     id="confirm-password"
                     placeholder="••••••••"
@@ -210,6 +214,7 @@ const NewUserForm = () => {
                   type="submit"
                   className="w-full text-white bg-primary-600 cursor-pointer hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-[#49d196] dark:hover:bg-green-700 dark:focus:ring-primary-800"
                   disabled={!canSave}>
+              
                   <FontAwesomeIcon icon={faSave} /> Create an account
                 </button>
                 {/* <p className="text-sm font-light text-gray-500 dark:text-gray-400">
